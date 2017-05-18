@@ -1,7 +1,7 @@
 import os
 import sys
 
-from norman.utils.importer import get_default_django_settings_module
+from norman.utils.imports import get_default_django_settings_module
 
 if __name__ == "__main__":
     os.environ.setdefault(
