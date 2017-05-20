@@ -24,9 +24,9 @@ class Organization(models.Model):
         through='norman.OrganizationMember',
         related_name='org_memberships')
     status = models.IntegerField(choices=(
-        OrganizationStatus.DEMO, _("demo"),
-        OrganizationStatus.PAID, _("paid"),
-        OrganizationStatus.DISCONTINUED, _("discontinued"),
+        (OrganizationStatus.DEMO, _("demo")),
+        (OrganizationStatus.PAID, _("paid")),
+        (OrganizationStatus.DISCONTINUED, _("discontinued")),
     ), default=OrganizationStatus.DEMO)
 
     def get_audit_log_data(self):

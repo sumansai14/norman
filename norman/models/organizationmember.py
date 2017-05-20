@@ -26,10 +26,10 @@ class OrganizationMember(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='norman_org_member_set')
     email = models.EmailField(null=True, blank=True)
     role = models.IntegerField(choices=(
-        OrganizationRoles.ADMIN, _("admin"),
-        OrganizationRoles.MEMBER, _("member"),
-        OrganizationRoles.CULTIVATOR, _("cultivator"),
-    ), deafult=OrganizationRoles.MEMBER)
+        (OrganizationRoles.ADMIN, _("admin")),
+        (OrganizationRoles.MEMBER, _("member")),
+        (OrganizationRoles.CULTIVATOR, _("cultivator")),
+    ), default=OrganizationRoles.MEMBER)
     created_at = models.DateTimeField(default=timezone.now)
 
     def get_audit_log_data(self):

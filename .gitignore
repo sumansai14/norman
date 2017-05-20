@@ -88,3 +88,10 @@ local.py
 
 .env
 db.sqlite3
+
+norman/static/version
+norman/static/sentry/dist/
+norman/static/sentry/vendor/
+norman/static/sentry/admin/
+norman/static/sentry/debug_toolbar/
+norman/static/sentry/rest_framework/
