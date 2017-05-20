@@ -95,3 +95,4 @@ norman/static/sentry/vendor/
 norman/static/sentry/admin/
 norman/static/sentry/debug_toolbar/
 norman/static/sentry/rest_framework/
+node_modules/

@@ -1,0 +1,12 @@
+{
+  "name": "norman",
+  "version": "1.0.0",
+  "description": "Infrastructure platform for agribusinesses",
+  "main": "index.js",
+  "repository": "ssh://git@bitbucket.org/farmi/norman.git",
+  "author": "Sai Suman Prayaga <suman.sai14@gmail.com>",
+  "license": "NA",
+  "dependencies": {
+    "webpack": "^2.5.1"
+  }
+}
