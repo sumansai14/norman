@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-text;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray-darker;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  // padding-left: $sidebar-width;
+  // padding-top: 30px;
+
+  // Fake sidebar rendering until actual sidebar is loaded
+
+  // background-image: linear-gradient($header-bg-color, $header-bg-color);
+  // background-size: $sidebar-width;
+  background-color: $gray;
+  background-repeat: repeat-y;
+  z-index: 0;
+}

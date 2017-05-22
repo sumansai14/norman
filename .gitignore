@@ -90,9 +90,9 @@ local.py
 db.sqlite3
 
 norman/static/version
-norman/static/sentry/dist/
-norman/static/sentry/vendor/
-norman/static/sentry/admin/
-norman/static/sentry/debug_toolbar/
-norman/static/sentry/rest_framework/
+norman/static/dist/
+norman/static/vendor/
+norman/static/admin/
+norman/static/debug_toolbar/
+norman/static/rest_framework/
 node_modules/

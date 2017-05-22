@@ -3,6 +3,8 @@ from __future__ import absolute_import
 import logging
 
 from django.contrib.auth.backends import ModelBackend
+from django.contrib.auth import login as _login
+from django.conf import settings
 
 from norman.models import User
 
@@ -16,9 +18,16 @@ def find_users(search_criteria, is_active=None):
         qs = qs.filter(is_active=is_active)
     try:
         user = qs.get(email__iexact=search_criteria)
-    except:
+    except User.DoesNotExist:
         user = qs.get(phone_number__iexact=search_criteria)
     return [user]
+
+
+def login(request, user, organization_id=None):
+    if not hasattr(user, 'backend'):
+        user.backend = settings.AUTHENTICATION_BACKENDS[0]
+    _login(request, user)
+    return True
 
 
 class AuthBackend(ModelBackend):
@@ -28,19 +37,19 @@ class AuthBackend(ModelBackend):
     Supports authenticating via an email address or a phone number.
     """
 
-    def authenticate(self, email=None, phone_number=None, otp=None, password=None, passed_challenge=None):
-        search_criteria = email or phone_number
+    def authenticate(self, username=None, otp=None, password=None, passed_challenge=None):
+        print "reached here"
+        search_criteria = username
         users = find_users(search_criteria)
         print "reached here"
         print users
         if users:
             for user in users:
-                if email:
-                    try:
-                        if user.password and user.check_password(password):
-                            return user
-                    except ValueError:
-                        continue
-                if phone_number and passed_challenge:
-                    return user
+                try:
+                    print user.password, user.check_password(password)
+                    if user.password and user.check_password(password):
+                        print user.password, user.check_password
+                        return user
+                except ValueError:
+                    continue
         return None

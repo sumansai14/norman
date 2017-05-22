@@ -1,0 +1,77 @@
+.auth{
+    margin-left: 30%;
+    width: 70%;
+    margin-top: 50px;
+    .card{
+        border: 1px solid $gray-darker;
+        border-radius: 1px;
+        .card-block{
+            padding: 0px;
+            .border{
+                border-bottom: 1px solid $gray-darker;
+            }
+            .card-text{
+                .login-heading{
+                    text-align: center;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $gray-even-darker;
+                }
+                .login-form{
+                    .login-button{
+                        text-align: center;
+                        padding-bottom: 20px;
+                        .btn.btn-primary{
+                            border-radius: 1px;
+                            background-color: $purple;
+                            border-color: $purple;
+                            font-family: $font-family-text;
+                            &:hover{
+                                background-color: $purple-dark;   
+                            }
+                        }
+                    }
+                }
+                form{
+                    .form-group{
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 20px;
+                        width: 80%;
+                        .form-control-label{
+                            color: $gray-even-darker;
+                        }
+                        .form-control{
+                            border-radius: 1px;
+                            font-family: $font-family-text;
+                        }
+                    }
+                }
+            }
+            .card-title{
+                background-color: #E6DBE8;
+                padding-left: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 0px;
+                .farmi-brand{
+                    font-size: 24px;
+                    .farmi-logo{
+                        margin-top: 13px;
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .farmi-f, .farmi-text{
+                        font-size: 28px;
+                    }
+                    .farmi-f{
+                        margin-top: -2px;
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

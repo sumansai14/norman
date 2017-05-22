@@ -1,0 +1,78 @@
+
+.farmi-logo{
+	display: block;
+	background-color: $green;
+	height: 50px;
+	width: 50px;
+	z-index: 10;
+	border-radius: 50%;
+	text-align: center;
+	float: left;
+	
+
+}
+.farmi-f, .profile-letter{
+	vertical-align: middle;
+	color: white;
+	margin-top: 10px;
+	font-size: 36px;
+	position: relative;
+	left: 8px;
+	font-family: $font-family-heading;
+}
+.profile-letter{
+	top: -5px;
+	left: 12px;
+}
+.farmi-text{
+	color: black;
+	font-size: 36px;
+	font-family: $font-family-heading;
+	margin-top: 10px;
+}
+.profile-pic{
+	height: 50px;
+	width: 50px;
+	background-color: $blue-light;
+	margin-top: -15px;
+}
+.content{
+	display: block;
+	padding-top: 10px;
+}
+
+
+.sidebar{
+	.nav{
+		.nav-item{
+			.nav-link{
+				color: $purple;
+				font-size: 20px;
+				text-decoration: none;
+			}
+			.nav-link.active{
+				background-color: white;
+				border: 1px solid $gray-darker;
+				&:hover{
+					box-shadow: 0 1px 3px rgba(0,0,0,.08);
+					z-index: 9;
+
+				}
+			}
+			.nav-link.disabled{
+				color: $gray-disabled;
+			}
+
+		}
+	}
+}
+
+.farmer{
+	margin-top: 16px;
+	.btn{
+		border-radius: 1px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px
+	}
+}

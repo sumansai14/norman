@@ -1,4 +1,44 @@
 {% extends "norman/layout.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block bodyclass %}
+    welcome
+{% endblock bodyclass %}
 {% block content %}
-	Hello
+        <div class="auth">
+            <div class="card">
+                <div class="card-block">
+                    <div class="card-title">
+                        <div class="farmi-brand">
+                            <div class="farmi-logo">
+                                <span class="farmi-f navbar-text">
+                                    F
+                                </span>
+                            </div>
+                            <div>
+                                <span class="navbar-text farmi-text">armi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="card-text">
+                        <div class="login-heading">
+                            Login
+                        </div>
+                        <div class="login-form">
+                            <form action="/auth/login/" method="post">
+                                {% csrf_token %}
+                                {{ login_form|as_crispy_errors }}
+                                {% for field in login_form %}
+                                    {{field|as_crispy_field}}
+                                {% endfor %}
+                                <div class="login-button">
+                                    <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock content %}

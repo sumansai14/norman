@@ -39,6 +39,7 @@ class Settings(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'crispy_forms',
     )
 
     MIDDLEWARE_CLASSES = (

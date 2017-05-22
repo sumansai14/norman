@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from norman.web.urls import urlpatterns as web_url_patterns
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-] + web_url_patterns
+] + web_url_patterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
